@@ -1,18 +1,61 @@
 .App {
-  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ *{
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,0.5);
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent;
+  
+} *
+
+.main {
+  background: white;
+  min-height: 50vh;
+  width:35.3rem;
+   background: linear-gradient(
+    to  bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );  
+  border-radius: 2rem;
+  background-color: white;
+   backdrop-filter: blur(2rem); 
+  padding: 1rem;
+  overflow: auto;
+  border-radius: .5rem;
+  --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(17,24,39,var(--tw-text-opacity));
+  
 }
 
+
+
+*, :after, :before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+
+
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +65,147 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.channel-search {
+  width: 95%;
+  border-radius: 9999px;
+  border-width: 2px;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-top: .25rem;
+  padding-bottom: 1.25rem;
+  position: relative;
+} 
+
+.channel-input {
+  width: 90%;
+  height: 100%;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+ 
+}
+
+
+input:focus{
+  outline: none;
+  cursor: pointer;
+}
+
+
+.channel-search__icon {
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.listing {
+  height: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 24rem;
+  overflow-y: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  width: 91.666667%;
+}
+
+
+.button {
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    width: 83.333333%;
+}
+
+.flexButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons--apply, .buttons--cancel {
+  --tw-border-opacity: 1;
+  border-radius: 9999px;
+  border-width: 1px;
+  padding-top: .55rem;
+  padding-bottom: .25rem;
+  width: 5rem;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.buttons--apply {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17,24,39,var(--tw-bg-opacity));
+  border-color: rgba(243,244,246,var(--tw-border-opacity));
+  margin-left: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(249,250,251,var(--tw-text-opacity));
+}
+button:focus{
+  outline: none;
+
+}
+
+button input {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  
+}
+
+.channel-list-item {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.channel-list-info {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+}
+
+.channel-list-handle {
+  cursor: move;
+}
+
+.channel-icon-tile {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249,250,251,var(--tw-bg-opacity));
+  border-radius: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: .5rem;
+}
+
+
+.channel-list-action {
+  cursor: pointer;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgba(107,114,128,var(--tw-text-opacity));
+  outline: none;
+  background-color: transparent;
 }
