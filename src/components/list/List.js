@@ -16,8 +16,7 @@ const List = ({ deleteChannel, listInput, setListInput }) => {
                 }
             }).map(channels => (
                 <Listdetails name={channels.name} channel={channels} key={channels.id}
-                    deleteChannel={deleteChannel}
-                    
+                    deleteChannel={deleteChannel}   
                 />
             ))}
         </div>
